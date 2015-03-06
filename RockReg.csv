@@ -1,0 +1,39 @@
+#============================================================================
+#   FILE NAME:  Rockvalues.csv
+#----------------------------------------------------------------------------
+# PURPOSE:
+#   Rock and Mineral values to be loaded into an hdf5 database
+#
+#----------------------------------------------------------------------------
+# HISTORY:
+#
+#   Date     Author               Notes
+# --------  ----------------  -----------------------------------------------
+# 05Mar15   A. K. Jackson     Initial Implementation.
+#============================================================================
+
+#   To do
+
+#   data stored as index, name, type, form, units, source, priority, a, b, c
+#   where type = "Vs(Vp)", "Rho(Vp)", "Vp(Phi)", "Vs(Phi)"
+#         form = "poly" or "powr" (polynomial or power law)
+#         units = "I" (Imperial) or "M" (Metric)
+#         source (see below)
+#         coefficients are as follows:
+#           for polynomials, a + bx + cx**2
+#           for power laws,  a + bx**c
+
+#       N = np.nan
+
+# References
+#         ==========
+        
+#         Mavko: Gary Mavko, Tapan Mukerji and Jack Dvorkin, "The Rock Physics Handbook", 1998.
+#         Cast: J.P. Castagna, M.L. Batzle, and T.K. Kan, "Rock Physics - The
+#            Link Between Rock Properties and AVO Response" in "Offset-Dependent
+#            Reflectivity - Theory and Practice of AVO Analysis", John Castagna
+#            and Milo Backus ed., 1993.
+#         Gard: Gardner, G.H.F.; Gardner L.W. & Gregory A.R. (1974). "Formation
+#            velocity and density -- the diagnostic basics for stratigraphic
+#            traps". Geophysics 39: 770–780.
+
