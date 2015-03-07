@@ -2,28 +2,72 @@
 #   FILE NAME:  Rockvalues.csv
 #----------------------------------------------------------------------------
 # PURPOSE:
-#   Rock and Mineral values to be loaded into an hdf5 database
+#   Rock regressions to be loaded into an hdf5 database
 #
 #----------------------------------------------------------------------------
 # HISTORY:
 #
 #   Date     Author               Notes
 # --------  ----------------  -----------------------------------------------
-# 05Mar15   A. K. Jackson     Initial Implementation.
+# 06Mar15   A. K. Jackson     Initial Implementation.
 #============================================================================
 
 #   To do
 
-#   data stored as index, name, type, form, units, source, priority, a, b, c
+#   data stored as index, name, type, form, units, source, priority, a, b, c, r
 #   where type = "Vs(Vp)", "Rho(Vp)", "Vp(Phi)", "Vs(Phi)"
 #         form = "poly" or "powr" (polynomial or power law)
-#         units = "I" (Imperial) or "M" (Metric)
+#         units = "I" (Imperial) or "M" (Metric M/S) or "K" (Metric KM/s)
 #         source (see below)
 #         coefficients are as follows:
 #           for polynomials, a + bx + cx**2
 #           for power laws,  a + bx**c
+#         and r is the R value for the statistical power of the fit
 
 #       N = np.nan
+
+0001, Shale,     Vs(Vp),      poly, K,  Cast, 0,  -0.8674,  0.7700,      0.0, N
+0002, Shale,     Rho(Vp),     poly, K,  Cast, 0,    1.458,   0.373,  -0.0261, N
+0003, Shale,     Rho(Vp)Gard, powr, K,  Cast, 0,      0.0,    1.75,    0.265, N
+0004, Sand,      Vs(Vp),      poly, K,  Cast, 1,  -0.8559,  0.8042,      0.0, N
+0005, Sand,      Rho(Vp),     poly, K,  Cast, 1,    1.515,   0.261,  -0.0115, N
+0006, Sand,      Rho(Vp)Gard, powr, K,  Cast, 0,      0.0,    1.66,    0.261, N
+0007, Limestone, Vs(Vp),      poly, K,  Cast, 1, -1.03049, 1.01677, -0.05508, N
+0008, Limestone, Rho(Vp),     poly, K,  Cast, 1,    0.963,   0.461,  -0.0296, N
+0009, Limestone, Rho(Vp)Gard, powr, K,  Cast, 0,      0.0,    1.50,    0.225, N
+0010, Dolomite,  Vs(Vp),      poly, K,  Cast, 1, -0.07776,  0.5832,      0.0, N
+0011, Dolomite,  Rho(Vp),     poly, K,  Cast, 1,    1.242,   0.390,  -0.0235, N
+0012, Dolomite,  Rho(Vp)Gard, powr, K,  Cast, 0,      0.0,    1.74,    0.252, N
+0013, Anhydrite, Rho(Vp),     poly, K,  Cast, 1,    1.732,   0.321,  -0.0203, N
+0014, Anhydrite, Rho(Vp)Gard, powr, K,  Cast, 0,      0.0,    2.19,    0.160, N
+0015, Chalk,     Vs(Vp),      poly, K, Mavko, 0,  0.34543, 0.49511,      0.0, 0.98899
+0016, Chalk,     Rho(Vp),     poly, K, Mavko, 0,    1.045, 0.37308,      0.0, 0.88676
+0017, Chalk,     Vp(Phi),     poly, K, Mavko, 0,   5.1284, -8.5052,  -5.0598, 0.92231
+0018, Chalk,     Vs(Phi),     poly, K, Mavko, 0,   2.7665, -2.9334,      0.0, 0.9927
+0019, Sand,      Vs(Vp),      poly, K, Mavko, 0, -0.73327,  0.7683,      0.0, 0.97843
+0020, Sand,      Rho(Vp),     poly, K, Mavko, 0,   1.5694, 0.19519,      0.0, 0.7312
+0021, Sand,      Vp(Phi),     poly, K, Mavko, 0,   4.9442, -5.2011,      0.0, 0.72826
+0022, Sand,      Vs(Phi),     poly, K, Mavko, 0,   2.9814, -3.4843,      0.0, 0.6213
+0023, Limestone, Vs(Vp),      poly, K, Mavko, 0,-0.039208,  0.5443,      0.0, 0.9586
+0024, Limestone, Rho(Vp),     poly, K, Mavko, 0,   1.5138, 0.20238,      0.0, 0.89241
+0025, Limestone, Vp(Phi),     poly, K, Mavko, 0,   5.6248,   -6.65,      0.0, 0.88643
+0026, Limestone, Vs(Phi),     poly, K, Mavko, 0,    3.053, -3.8664,      0.0, 0.9179
+0027, Dolomite,  Vs(Vp),      poly, K, Mavko, 0,  0.25524,  0.5036,      0.0, 0.95378
+0028, Dolomite,  Rho(Vp),     poly, K, Mavko, 0,   1.8439, 0.13786,      0.0, 0.82496
+0029, Dolomite,  Vp(Phi),     poly, K, Mavko, 0,   6.6067, -9.3808,      0.0, 0.87762
+0030, Dolomite,  Vs(Phi),     poly, K, Mavko, 0,   3.5817, -4.7194,      0.0, 0.83621
+0031, TightSand, Vs(Vp),      poly, K, Mavko, 0,   0.4855, 0.55149,      0.0, 0.8997
+0032, TightSand, Rho(Vp),     poly, K, Mavko, 0,   1.9617, 0.11787,      0.0, 0.39424
+0033, TightSand, Vp(Phi),     poly, K, Mavko, 0,   4.8689, -3.8366,      0.0, 0.37566
+0034, TightSand, Vs(Phi),     poly, K, Mavko, 0,   3.1491, -1.7039,      0.0, 0.27218
+0035, HiPorSand, Vs(Vp),      poly, K, Mavko, 0,0.0068626, 0.56839,      0.0, 0.9438
+0036, HiPorSand, Rho(Vp),     poly, K, Mavko, 0,   1.4507,  0.2192,      0.0, 0.47861
+0037, HiPorSand, Vp(Phi),     poly, K, Mavko, 0,   4.3038, -2.2279,      0.0, 0.51345
+0038, HiPorSand, Vs(Phi),     poly, K, Mavko, 0,   2.4868, -1.6268,      0.0, 0.54027
+0039, UnConSand, Vs(Vp),      poly, K, Mavko, 0, -0.31459, 0.61088,      0.0, 0.90174
+0040, UnConSand, Rho(Vp),     poly, K, Mavko, 0,   1.4983, 0.22409,      0.0, 0.76108
+0041, UnConSand, Vp(Phi),     poly, K, Mavko, 0,   3.7742, -3.4144,      0.0, 0.75854
+0042, UnConSand, Vs(Phi),     poly, K, Mavko, 0,   2.1003, -2.4245,      0.0, 0.81711
 
 # References
 #         ==========
