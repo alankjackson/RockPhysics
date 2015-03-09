@@ -68,6 +68,7 @@
 0040, UnConSand, Rho(Vp),     poly, K, Mavko, 0,   1.4983, 0.22409,      0.0, 0.76108
 0041, UnConSand, Vp(Phi),     poly, K, Mavko, 0,   3.7742, -3.4144,      0.0, 0.75854
 0042, UnConSand, Vs(Phi),     poly, K, Mavko, 0,   2.1003, -2.4245,      0.0, 0.81711
+0043, Shale,     Rho(Vp),     powr, K,  Gard, 0,      0.0,   0.310,     0.25, N      
 
 # References
 #         ==========
