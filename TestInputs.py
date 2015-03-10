@@ -35,7 +35,7 @@ minerals_csv = "RockValues.csv"
 regressions_csv = "RockReg.csv"
 
 try:
-    index, name, priority, source, units, values = RPDB.openMincsv(minerals_csv)
+    (index, name, priority, source, units, values) = RPDB.openMincsv(minerals_csv)
 except IOError:
     print("opencsv returns IOError")
 else:
