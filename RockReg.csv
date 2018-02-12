@@ -11,9 +11,9 @@
 # --------  ----------------  -----------------------------------------------
 # 06Mar15   A. K. Jackson     Initial Implementation.
 #============================================================================
-
+#
 #   To do
-
+#
 #   data stored as index, name, type, form, units, source, priority, a, b, c, r
 #   where type = "Vs(Vp)", "Rho(Vp)", "Vp(Phi)", "Vs(Phi)"
 #         form = "poly" or "powr" (polynomial or power law)
@@ -23,7 +23,7 @@
 #           for polynomials, a + bx + cx**2
 #           for power laws,  a + bx**c
 #         and r is the R value for the statistical power of the fit
-
+#
 #       N = np.nan
 
 0001, Shale,     Vs(Vp),      poly, K,  Cast, 0,  -0.8674,  0.7700,      0.0, N
@@ -72,7 +72,7 @@
 
 # References
 #         ==========
-        
+#        
 #         Mavko: Gary Mavko, Tapan Mukerji and Jack Dvorkin, "The Rock Physics Handbook", 1998.
 #         Cast: J.P. Castagna, M.L. Batzle, and T.K. Kan, "Rock Physics - The
 #            Link Between Rock Properties and AVO Response" in "Offset-Dependent
